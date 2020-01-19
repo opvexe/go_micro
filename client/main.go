@@ -4,7 +4,6 @@ import(
 	"context"
 	"fmt"
 	"github.com/micro/go-micro"
-	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-plugins/registry/etcdv3"
 	pbw "ibook/server/book/proto/book"
 )

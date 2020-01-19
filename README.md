@@ -19,5 +19,6 @@ $ curl -L http://127.0.0.1:32791/v2/members
 $ docker exec -t etcd1 etcdctl member list
 ```
 
+注意要点：
 
-
+==服务注册IP地址一定不要与etcd的IP地址重合==
