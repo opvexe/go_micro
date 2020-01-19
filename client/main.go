@@ -12,16 +12,18 @@ import(
 func main() {
 	//注册etcd
 	/* reg :=etcdv3.NewRegistry() */
-	reg := etcdv3.NewRegistry(func(op *registry.Options){
-		op.Addrs = []string{
-			"http://127.0.0.1:32779",
-		}
-	})
+	//reg := etcdv3.NewRegistry(func(op *registry.Options){
+	//	op.Addrs = []string{
+	//		"http://127.0.0.1:32779",
+	//	}
+	//})
+
+	reg :=etcdv3.NewRegistry()
 
 	sevice := micro.NewService(
 		micro.Registry(reg),
 	)
-	sevice.Init()
+
 	c := pbw.NewGreeterService("go.micro.srv.book",sevice.Client())
 	resp,err:=c.SayHello(context.Background(),&pbw.HelloRequest{
 		Name:                 "SHUMIN",
