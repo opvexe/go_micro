@@ -23,6 +23,12 @@ $ docker exec -t etcd1 etcdctl member list
 
 ==服务注册IP地址一定不要与etcd的IP地址重合==
 
+#### 1.3 查看服务注册
+
+```shell
+micro --registry=etcd --registry_address=127.0.0.1:29379 list services
+```
+
 #### 1.3 使用文档
 
 设置版本： ETCDCTL_API=3
