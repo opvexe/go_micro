@@ -21,8 +21,8 @@ services:
     environment:
       - ETCDCTL_API=3
     ports:
-      - 2379
-      - 2380
+      - 22379:2379
+      - 22380:2380
     networks:
       - byfn
 
@@ -33,8 +33,8 @@ services:
     environment:
       - ETCDCTL_API=3
     ports:
-      - 2379
-      - 2380
+      - 23379:2379
+      - 23380:2380
     networks:
       - byfn
 

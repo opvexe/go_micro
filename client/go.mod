@@ -1,4 +1,4 @@
-module ibook/server/book
+module ibook/client
 
 go 1.13
 
